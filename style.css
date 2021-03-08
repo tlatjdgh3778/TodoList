@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(150deg, #d88771, #747272);
+  color: white;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  font-size: 2rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem;
+  background: white;
+}
+
+form button {
+  color: #d88771;
+  background-color: white;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+form button:hover {
+  background: #d88771;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all ease 0.5s;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.complete-button,
+.delete-button {
+  background: #ff6f47;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-button {
+  background: rgb(98, 255, 98);
+}
+.todo-item {
+  padding: 0px 10px;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.완료 {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #ff6f47;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select {
+  position: relative;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  background: #ff6f47;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all ease 0.5s;
+}
+
+.select:hover::after {
+  background-color: white;
+  color: #ff6f47;
+}
